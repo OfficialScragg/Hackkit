@@ -1,0 +1,35 @@
+.center ,div ,span{
+	margin: auto;
+}
+
+.center ,h1 ,h2 ,h3 ,h4 ,h5 ,p{
+	text-align: center;
+}
+
+.heading {
+	font-size: 50px;
+	margin-top: 5%;
+}
+
+body {
+	background-color:  #000000;
+	color: #20C20E;
+}
+
+.label {
+
+}
+
+textarea {
+	background-color: #0F0F0F;
+	color: white;
+	resize: none;
+	width: 25%;
+	height: 50%;
+	margin: 10% 5% 0 5%;
+}
+
+.toolArea {
+	height:35%;
+	width:50%;
+}
