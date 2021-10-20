@@ -363,6 +363,43 @@ function qpDecode() {
     urlTextarea.value = url;
 }
 
+function hexByteFormat(){
+    var hexTextarea = document.getElementById("hexText");
+    var input = hexTextarea.value;
+
+    var res = "";
+    var space = false;
+
+    for (var i = 0; i < input.length; i++) {
+        if(space){
+            res += input[i]+" ";
+            space = false;
+        }else{
+            res += input[i];
+            space = true;
+        }
+    }
+    res = res.toUpperCase().trim();
+    hexTextarea.value = res;
+}
+
+function binByteFormat(){
+    var binTextarea = document.getElementById("binText");
+    var input = binTextarea.value;
+
+    var res = "";
+
+    for (var i = 0; i < input.length; i++) {
+        if((i+1)%8 == 0){
+            res += input[i]+" ";
+        }else{
+            res += input[i];
+        }
+    }
+    res = res.toUpperCase().trim();
+    binTextarea.value = res;
+}
+
 // HELPER FUNCTIONS
 function ascii2hex(str){
 	var arr1 = [];
