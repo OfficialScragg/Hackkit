@@ -20,6 +20,8 @@
 
 		<!-- CSS Files -->
 		<link id="pagestyle" href="{% static 'css/soft-ui-dashboard.css' %}" rel="stylesheet" />
+		<link href="{% static 'css/styles.css' %}" rel="stylesheet" />
+		
 	</head>
 	
 	<body class="g-sidenav-show">
@@ -114,9 +116,185 @@
 			<!-- End Navbar -->
 			<!-- Main Function -->
             <div class="container-fluid py-4">
-                <div style="text-align: center">
-                    <h3>Conversions</h3>
-                </div>
+                <!-- Heading -->
+				<div class="row">
+					<div class="col-xl-12 col-sm-12 mb-xl-0 mb-4">
+						<div class="card">
+							<div class="card-body p-3">
+								<div class="row">
+									<div class="col-12">
+										<div class="numbers text-center">
+											<h3 class="font-weight-bolder mb-0">
+												Conversions
+											</h3>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<!-- End Heading -->
+				<!-- Top Row -->
+				<div class="row mt-4">
+					<div class="col-lg-3 mb-lg-0 mb-2">
+						<div class="card">
+							<div class="card-body p-3">
+								<div class="row">
+									<div class="col-lg-12 mb-1">
+										<div class="d-flex flex-column text-center align-items-center justify-content-center" style="height: 300px;">
+											<p>Base64</p>
+											<textarea style="height: 65%;width: 85%;resize: none"></textarea>
+											<div class="bg-gradient-dark mt-3" style="padding: 10px 25px 10px 25px; border-radius: 10px;width:100px;">
+												<a class="text-white text-sm font-weight-bold mb-0 icon-move-right" href="suggest">
+												<b>Decode</b>
+												</a>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="col-lg-3 mb-lg-0 mb-2">
+						<div class="card">
+							<div class="card-body p-3">
+								<div class="row">
+									<div class="col-lg-12 mb-1">
+										<div class="d-flex flex-column text-center align-items-center justify-content-center" style="height: 300px;">
+											<p>Hexadecimal</p>
+											<textarea style="height: 80%;width: 85%;resize: none"></textarea>
+											<div class="bg-gradient-dark mt-3" style="padding: 10px 25px 10px 25px; border-radius: 10px;width:100px;">
+												<a class="text-white text-sm font-weight-bold mb-0 icon-move-right" href="suggest">
+												<b>Decode</b>
+												</a>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="col-lg-3 mb-lg-0 mb-2">
+						<div class="card">
+							<div class="card-body p-3">
+								<div class="row">
+									<div class="col-lg-12 mb-1">
+										<div class="d-flex flex-column text-center align-items-center justify-content-center" style="height: 300px;">
+											<p>Decimal</p>
+											<textarea style="height: 80%;width: 85%;resize: none"></textarea>
+											<div class="bg-gradient-dark mt-3" style="padding: 10px 25px 10px 25px; border-radius: 10px;width:100px;">
+												<a class="text-white text-sm font-weight-bold mb-0 icon-move-right" href="suggest">
+												<b>Decode</b>
+												</a>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="col-lg-3 mb-lg-0 mb-2">
+						<div class="card">
+							<div class="card-body p-3">
+								<div class="row">
+									<div class="col-lg-12 mb-1">
+										<div class="d-flex flex-column text-center align-items-center justify-content-center" style="height: 300px;">
+											<p>Binary</p>
+											<textarea style="height: 80%;width: 85%;resize: none"></textarea>
+											<div class="bg-gradient-dark mt-3" style="padding: 10px 25px 10px 25px; border-radius: 10px;width:100px;">
+												<a class="text-white text-sm font-weight-bold mb-0 icon-move-right" href="suggest">
+												<b>Decode</b>
+												</a>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<!-- End Top Row -->
+				<!-- Second Row -->
+				<div class="row mt-4">
+					<div class="col-lg-3 mb-lg-0 mb-2">
+						<div class="card">
+							<div class="card-body p-3">
+								<div class="row">
+									<div class="col-lg-12 mb-1">
+										<div class="d-flex flex-column text-center align-items-center justify-content-center" style="height: 300px;">
+											<p>ASCII</p>
+											<textarea style="height: 80%;width: 85%;resize: none"></textarea>
+											<div class="bg-gradient-dark mt-3" style="padding: 10px 25px 10px 25px; border-radius: 10px;width:100px;">
+												<a class="text-white text-sm font-weight-bold mb-0 icon-move-right" href="suggest">
+												<b>Decode</b>
+												</a>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="col-lg-3 mb-lg-0 mb-2">
+						<div class="card">
+							<div class="card-body p-3">
+								<div class="row">
+									<div class="col-lg-12 mb-1">
+										<div class="d-flex flex-column text-center align-items-center justify-content-center" style="height: 300px;">
+											<p>UTF-8</p>
+											<textarea style="height: 80%;width: 85%;resize: none"></textarea>
+											<div class="bg-gradient-dark mt-3" style="padding: 10px 25px 10px 25px; border-radius: 10px;width:100px;">
+												<a class="text-white text-sm font-weight-bold mb-0 icon-move-right" href="suggest">
+												<b>Decode</b>
+												</a>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="col-lg-3 mb-lg-0 mb-2">
+						<div class="card">
+							<div class="card-body p-3">
+								<div class="row">
+									<div class="col-lg-12 mb-1">
+										<div class="d-flex flex-column text-center align-items-center justify-content-center" style="height: 300px;">
+											<p>URL</p>
+											<textarea style="height: 80%;width: 85%;resize: none"></textarea>
+											<div class="bg-gradient-dark mt-3" style="padding: 10px 25px 10px 25px; border-radius: 10px;width:100px;">
+												<a class="text-white text-sm font-weight-bold mb-0 icon-move-right" href="suggest">
+												<b>Decode</b>
+												</a>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="col-lg-3 mb-lg-0 mb-2">
+						<div class="card">
+							<div class="card-body p-3">
+								<div class="row">
+									<div class="col-lg-12 mb-1">
+										<div class="d-flex flex-column text-center align-items-center justify-content-center" style="height: 300px;">
+											<p>Quoted-Printable</p>
+											<textarea style="height: 80%;width: 85%;resize: none"></textarea>
+											<div class="bg-gradient-dark mt-3" style="padding: 10px 25px 10px 25px; border-radius: 10px;width:100px;">
+												<a class="text-white text-sm font-weight-bold mb-0 icon-move-right" href="suggest">
+												<b>Decode</b>
+												</a>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<!-- End Second Row -->
                 <!-- Footer -->
                 <footer class="footer pt-3  ">
 					<div class="container-fluid">
