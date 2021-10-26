@@ -256,11 +256,9 @@ function utf8Decode() {
     });
     dec = dec.trim();
 
-    var utf8 = b642utf8(b64);
+    var url = encodeURI(utf8Encoded);
 
-    var url = encodeURI(utf8);
-
-    var qp = quotedPrintable.encode(utf8);
+    var qp = quotedPrintable.encode(utf8Encoded);
 
     hexTextarea.value = hex;
     decTextarea.value = dec;
