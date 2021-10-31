@@ -26,7 +26,7 @@ SECRET_KEY = 'django-insecure-dgusm@s#m%t5)x86a$wk&o^i78(l)xc+8xbycny2ic6&g7jjlh
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['hackkit.io', 'www.hackkit.io']
+ALLOWED_HOSTS = ['hackkit.io', 'www.hackkit.io', 'localhost']
 
 
 # Application definition
