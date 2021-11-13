@@ -13,7 +13,7 @@ function b64Decode() {
     var b64Encoded = b64Textarea.value;
 
     // Other Encodings
-    var ascii = atob(b64Encoded);
+    var ascii = convertUtf8ToAscii(atob(b64Encoded));
     var hex = ascii2hex(ascii).toUpperCase();
 
     var bin = ""
@@ -240,7 +240,7 @@ function utf8Decode() {
     // Other Encodings
     var b64 = utf82b64(utf8Encoded);
 
-    var ascii = atob(b64);
+    var ascii = convertUtf8ToAscii(atob(b64));
 
     var hex = ascii2hex(ascii).toUpperCase();
 
@@ -288,7 +288,7 @@ function urlDecode() {
 
     var b64 = utf82b64(utf8);
 
-    var ascii = atob(b64);
+    var ascii = convertUtf8ToAscii(atob(b64));
 
     var hex = ascii2hex(ascii).toUpperCase();
 
@@ -334,7 +334,7 @@ function qpDecode() {
 
     var b64 = utf82b64(utf8);
 
-    var ascii = atob(b64);
+    var ascii = convertUtf8ToAscii(atob(b64));
 
     var hex = ascii2hex(ascii).toUpperCase();
 
@@ -427,13 +427,31 @@ function bin2hex(bin){
 }
 
 function utf82b64(str){
-    return window.btoa(unescape(encodeURIComponent(str)));
+    //return window.btoa(unescape(encodeURIComponent(str)));
+    return window.btoa(str);
 }
   
 function b642utf8(str){
-    return decodeURIComponent(escape(window.atob(str)));
+    //return decodeURIComponent(escape(window.atob(str)));
+    return atob(str);
 }
 
 function dec2hex(dec){
     return parseInt(dec, 10).toString(16).toUpperCase();
+}
+
+function convertUtf8ToAscii(str){
+    var asciiStr = "";
+    var refTable = { // Reference table Unicode vs ASCII
+        199: 128, 252: 129, 233: 130, 226: 131, 228: 132, 224: 133, 231: 135, 234: 136, 235: 137, 232: 138,
+        239: 139, 238: 140, 236: 141, 196: 142, 201: 144, 244: 147, 246: 148, 242: 149, 251: 150, 249: 151
+    };
+    for(var i = 0; i < str.length; i++){
+        var ascii = refTable[str.charCodeAt(i)];
+        if (ascii != undefined)
+            asciiStr += "%" +ascii;
+        else
+            asciiStr += str[i];
+    }
+    return asciiStr;
 }
